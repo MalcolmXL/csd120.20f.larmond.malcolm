@@ -38,13 +38,16 @@
 
       <main>
         <h1>Welcome to Malcolm’s CSD120 Website!</h1>
-        <a href="Images/MalPic.jpg">
-          <img
-            srcset="MalPicThumb300wide.jpg, MalPicThumb150wide.jpg"
-            sizes="(max-width: 300px) 150px "
-            src="Images/MalPic.jpg"
-            alt="My Thumbnail"
-          />
+        
+        
+        <picture>
+          <a href="Images/MalPic.jpg">
+          <source media="(min-width: 300px)" srcset="Images/MalPicThumb300wide.jpg x2" alt="Thumbnail" />
+          <source media="(min-width: 150px)" srcset="Images/MalPicThumb150wide.jpg x1" />
+          <img src="Images/MalPicThumb300wide.jpg" alt=" Thumbnail" />
+         
+        </picture>
+
         </a>
 
         <p>
@@ -67,8 +70,7 @@
         <h2>My Favourite Things</h2>
 
         <figure>
-          <img src="Images/reason set up2.jpg" alt="Studio Setup" width="500"
-          height="300"">
+          <img src="Images/reason set up2.jpg" alt="Studio Setup" width="500" height="300">
           <figcaption>Fig.1 - Modern Studio Setup.</figcaption>
         </figure>
 
