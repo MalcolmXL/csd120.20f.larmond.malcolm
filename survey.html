@@ -15,14 +15,8 @@
     <meta name="theme-color" content="#ffffff" />
 
     <title>CSD120 Malcolm - Larmond</title>
-    <style>
-      div {
-        max-width: 1000px;
-        min-width: 100px;
-        background-color: whitesmoke;
-      }
-      <style> table { border-collapse: collapse; } th,td { border: 1px solid rgba(0,0,0,0.2); } </style>
-    </style>
+ 
+   
   </head>
 
   <body>
@@ -41,11 +35,11 @@
         <h1>Survey</h1>
        
 
-        <form action="/my-handling-form-page" method="post">
+        <form action="https://formspree.io/f/mrgopzgz" method="POST" id="form1">
            
                 <p>
                   <label for="name">What is your Name:</label>
-                  <input type="text" id="name" name="user_name">
+                  <input type="text" id="name" name="name_feild">
                 </p>
 
                 <p>
@@ -55,18 +49,18 @@
 
                 <p>
                     <label for="quantity">What is the best Whole Number:</label>
-                    <input type="number" id="quantity" name="quantity" min="0" max="5
-                    99"><br><br>
+                    <input type="number" id="quantity" name="quantity" min="0" max="9">
+                    <br>
 
                 </p>
                 <p>
                     <label for="birthday">What is the best day:</label>
-                    <input type="date" id="birthday" name="birthday">
+                    <input type="date" id="birthday" name="best_day">
                 </p>
                 <p> 
-                <label for="best bear">What is the best bear:</label>
+                <label for="best_bear">What is the best bear:</label>
 
-                <select name="best bear" id="best bear">
+                <select name="best_bear" id="best_bear" required>
                 <option value="Black">Black</option>
                 <option value="Brown">Brown</option>
                 <option value="Care">Care</option>
@@ -75,54 +69,39 @@
                 <option value="teddy">Teddy</option>
                 </select>
             </p>
-
+            <p> 
             <fieldset>
                 <legend>Do you like Radio Buttons:</legend>
-                <ul>
+                
                 <input type="radio" id="yes" name="radio" value="yes">
-                <label for="radio">Yes</label><br>
-                </ul>
-                <ul>
-                <input type="radio" id="radio" name="radio" value="no">
-                <label for="radio">No</label><br>
-                </ul>
-                <ul>
+                <label for="yes">Yes</label>
+                
+               
+                 <input type="radio" id="no" name="radio" value="no">
+                <label for="no">No</label><br>
+                
+
+                
                 <input type="radio" checked id="other" name="radio" value="?">
                 <label for="other">None of your business</label>
-                </ul>
-                   
-            </p>
 
-
-            
-
-
-
+                
 
             </fieldset>
-
-           
-              
-        
+            <p> 
+            <label for="life_meaning">What is the meaning of life:</label>
+            
+                <textarea id = life_meaning name="life_meaning" rows="5" cols="50" placeholder="Describe yourself here..."></textarea>
+            </p> 
+         
           </form> 
           
-          <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+          <button type="submit" form="form1" value="Submit"> Submit </button>
+            
           
-          </body>
-          </html>
+        </main>
+       
           
-
-
-
-
-
-
-
-
-
-       </form> 
-        
-      </main>
 
       <footer>
         <hr />
