@@ -40,14 +40,11 @@
         <h1>Welcome to Malcolm’s CSD120 Website!</h1>
         
         
-        <picture>
-          <a href="Images/MalPic.jpg" alt ="Thumbnail">
-          <source media="(min-width: 300px)" srcset="Images/MalPicThumb300wide.jpg x2" alt="Thumbnail" />
-          <source media="(min-width: 150px)" srcset="Images/MalPicThumb150wide.jpg x1" alt = "Thumbnail"/>
-          <img src="Images/MalPicThumb300wide.jpg" alt=" Thumbnail" />
-         
-        </picture>
-
+        <a href="Images/MalPic.jpg">
+          <img src="Images/MalPicThumb300wide.jpg" 
+            sizes="(max-width: 500px) 150px, 300px"
+            srcset="Images/MalPicThumb150wide.jpg 150w, Images/MalPicThumb300wide.jpg 300w"
+            alt="A selfie of Malcolm" />
         </a>
 
         <p>
@@ -70,7 +67,7 @@
         <h2>My Favourite Things</h2>
 
         <figure>
-          <img src="Images/reason set up2.jpg" alt="Studio Setup" width="500" height="300">
+          <img src="Images/reason%20set%20up2.jpg" alt="Studio Setup" width="500" height="300">
           <figcaption>Fig.1 - Modern Studio Setup.</figcaption>
         </figure>
 
@@ -96,21 +93,17 @@
             src="https://ia801505.us.archive.org/19/items/dream_collection_2_2009_librivox/dreamscollection02_04_various_128kb.mp3"
             type="audio/mp3"
           />
-        </audio>
-
-        <p>
           <a
             href="https://ia801505.us.archive.org/19/items/dream_collection_2_2009_librivox/dreamscollection02_04_various_128kb.mp3"
             >Click here to download the audio
           </a>
-        </p>
-        <br /><br />
+        </audio>
+
         <h3>Youtube Video</h3>
         <iframe
           width="560"
           height="315"
           src="https://www.youtube.com/embed/srqBRo1x7Ko"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
@@ -135,9 +128,10 @@
         </p>
 
         <picture>
-          <source media="(min-width: 70px)" srcset="Images/sc-logo@1.5x.png 150px" />
-          <source media="(min-width: 70px)" srcset="Images/sc-logo@2.5x.png 175px"/>
-          <img src="Images/sc-logo.png" alt=" SC Logo" />
+          <source type="image/svg+xml" srcset="Images/sc-logo.svg" />
+          <img src="Images/sc-logo.png" width="70"
+            srcset="Images/sc-logo.png, Images/sc-logo@1.5x.png 1.5x, Images/sc-logo@2x.png 2x"
+            alt=" SC Logo" />
         </picture>
       </footer>
       <!--Found Me-->
