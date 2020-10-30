@@ -1,0 +1,50 @@
+
+        
+     /* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+     /* main.css */   
+        
+div{
+  background-color: #18b0ec;
+  text-align: center;
+  padding: 20px;
+  width: 960px;
+  border: 1px black;
+  margin: 0px auto;
+  min-width: 480px;
+  border-left: 2em solid ;
+  border-right: 2em solid;
+  border-top: 2em;
+  border-bottom; 2em solid;
+  
+}
+
+
+hr {
+width: 50%;
+min-width: 300px;
+max-width: 860px;
+margin-top: 3em;
+margin-bottom: 2em;
+border-style: dotted;
+border-color: whitesmoke;
+border-width: 3px
+
+}
+
+
+
+
+body {
+  margin: 2em;
+  color: #fff;
+  background-color: #000;
+}
+
+/* Applies to all <h1>...</h1> elements. */
+h1 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+#someid { color: green; }
