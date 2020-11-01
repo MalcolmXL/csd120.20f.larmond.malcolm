@@ -7,7 +7,7 @@ selectors). */
 div{
   background-color: #18b0ec;
   text-align: center;
-  padding: 20px;
+  padding: 1em;
   width: 960px;
   border: 1px black;
   margin: 0px auto;
@@ -19,32 +19,155 @@ div{
   
 }
 
+nav{
+
+  border-top: 4px;
+  border-style: solid;
+  border-color: transparent;
+
+}
+
+
+nav ul{
+  max-width: 800;
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  
+ 
+  }
+
+  nav ul li {
+    float: left;
+    text-decoration:none;
+  
+
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    list-style-type: none;
+    
+  }
+  li a:hover {
+    background-color: #75b4d1;
+  }
+
+
 
 hr {
 width: 50%;
 min-width: 300px;
 max-width: 860px;
-margin-top: 3em;
+margin-top: 4px;
 margin-bottom: 2em;
 border-style: dotted;
 border-color: whitesmoke;
-border-width: 3px
+border-width: 3px;
+border-top: 4px;
+
 
 }
 
 
 
+a:link {
+  color: #5351af;
+}
+
+
+header {
+
+
+  border: top 4px;
+  
+  float:right;
+  padding:5;
+  width:960px;
+  margin-left: 80%;
+  border-bottom: 1px dotted;color: #000;
+ 
+}
 
 body {
-  margin: 2em;
+  margin: 1em;
   color: #fff;
-  background-color: #000;
+  background-color: rgb(67, 39, 189);
 }
 
 /* Applies to all <h1>...</h1> elements. */
 h1 {
+  font-size: 25px;
+  font-weight: normal;
+  margin-top: 5px;
+  color:whitesmoke;
+}
+
+h2 {
   font-size: 20px;
   font-weight: normal;
   margin-top: 5px;
+  color: whitesmoke;
 }
-#someid { color: green; }
+
+h3 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 5px;
+  color: whitesmoke;
+}
+li {
+ 
+  list-style-position: inside;
+  text-align: center;
+
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #fff;
+  background-color:rgb(0, 0, 0);opacity:0.6;
+  border-collapse: collapse;
+  text-align: left;
+  
+  
+}
+
+tr
+{
+  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+
+tr:nth-child;(even) {background-color:rgb(0, 0, 0);opacity:0.15;;}
+
+
+
+
+thead{
+  text-align: left;
+
+  background-color:rgb(0, 0, 0);opacity:0.6;
+}
+
+tfoot{
+
+  background-color:rgb(0, 0, 0);opacity:0.6;
+
+
+}
+
+dl {
+ 
+ list-style-position: center;
+ 
+  
+}
