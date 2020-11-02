@@ -7,8 +7,9 @@ selectors). */
 div{
   background-color: #18b0ec;
   text-align: center;
-  padding: 1em;
+  padding: .5em;
   width: 960px;
+  word-wrap: normal;
   border: 1px black;
   margin: 0px auto;
   min-width: 480px;
@@ -54,7 +55,10 @@ nav ul{
   }
   li a:hover {
     background-color: #75b4d1;
-  }
+
+}
+
+
 
 
 
@@ -95,7 +99,9 @@ header {
 body {
   margin: 1em;
   color: #fff;
-  background-color: rgb(67, 39, 189);
+  background-color: rgb(36, 103, 167);
+  text-align: center;
+
 }
 
 /* Applies to all <h1>...</h1> elements. */
@@ -120,9 +126,18 @@ h3 {
   color: whitesmoke;
 }
 li {
- 
-  list-style-position: inside;
+  margin-left: auto;
+  margin-right:auto;
+  list-style: none;
   text-align: center;
+  align-items: center;
+
+}
+ol {
+  
+  list-style: none;
+  text-align: center;
+  align-items: center;
 
 }
 
@@ -134,7 +149,7 @@ table {
   padding-left: 1em;
   padding-right: 1em;
   color: #fff;
-  background-color:rgb(0, 0, 0);opacity:0.6;
+  background-color:rgb(0, 0, 0);opacity:0.5;
   border-collapse: collapse;
   text-align: left;
   
@@ -147,27 +162,60 @@ tr
   
 }
 
-tr:nth-child;(even) {background-color:rgb(0, 0, 0);opacity:0.15;;}
+tr:nth-child(even) {background-color: #0d3e77;}
 
 
 
 
 thead{
-  text-align: left;
-
-  background-color:rgb(0, 0, 0);opacity:0.6;
+ 
+  color: #fff;
+  background-color:rgb(0, 0, 0);opacity:0.2;
+  text-align: center;
 }
 
 tfoot{
 
-  background-color:rgb(0, 0, 0);opacity:0.6;
+  background-color:rgb(0, 0, 0);opacity:0.2;
 
 
 }
 
-dl {
+dl{
  
- list-style-position: center;
+  align-items: center;
+}
+
+dl dd{
  
+color: #d6d6e2;
+align-items: center;
   
 }
+input:focus{
+  outline:none;
+}
+form{
+margin: 0;
+padding-left: 3em;
+padding-right: 3em;
+padding-top: 1em;
+padding-bottom: 1em;
+display: inline-block;
+vertical-align: middle; 
+box-shadow: none;
+border: none;
+background-color: rgb(28, 152, 201);
+}
+
+textarea {
+  width: 80%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid rgb(59, 164, 206);
+  border-radius: 4px;
+  background-color: #bee7fa;
+  resize: none;
+}
+
