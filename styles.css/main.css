@@ -3,58 +3,72 @@
      /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
      /* main.css */   
-        
-div{
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+dt::after {
+  content: ":";
+}
+
+::selection {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.width-wrap {
   background-color: #18b0ec;
   text-align: center;
-  padding: .5em;
-  width: 960px;
+  padding: 0 2em 2em;
+  max-width: 960px;
   word-wrap: normal;
   border: 1px black;
-  margin: 0px auto;
+  margin: 0px auto 3em;
   min-width: 480px;
   border-left: 2em solid ;
   border-right: 2em solid;
   border-top: 2em;
-  border-bottom; 2em solid;
+  border-bottom: 2em solid;
   
 }
 
 nav{
 
-  border-top: 4px;
-  border-style: solid;
-  border-color: transparent;
+  border-bottom: 1px dotted rgba(0,0,0,0.3);
+  margin-left: 2em;
+  margin-right: 2em;
 
 }
 
 
 nav ul{
-  max-width: 800;
   margin:0;
   padding:0;
-  list-style-type: none;
-  
- 
+  list-style-type: none; 
   }
 
   nav ul li {
-    float: left;
+    display: inline;
     text-decoration:none;
   
 
   }
-  li a {
-    display: block;
+  header nav li a {
+    display: inline-block;
     color: white;
     text-align: center;
-    padding: 16px;
+    padding: 1em 0 0.5em;
     text-decoration: none;
-    list-style-type: none;
-    
+    margin: -4px 1em 0;
+    border-top: 4px solid #75b4d100;   
   }
   li a:hover {
     background-color: #75b4d1;
+    border-color: #fff;
 
 }
 
@@ -63,15 +77,15 @@ nav ul{
 
 
 hr {
-width: 50%;
+width: 50vw;
 min-width: 300px;
-max-width: 860px;
-margin-top: 4px;
+max-width: 890px;
+margin-top: 3em;
 margin-bottom: 2em;
-border-style: dotted;
-border-color: whitesmoke;
-border-width: 3px;
-border-top: 4px;
+border: none;
+border-bottom-style: dotted;
+border-bottom-color: whitesmoke;
+border-bottom-width: 3px;
 
 
 }
@@ -84,20 +98,13 @@ a:link {
 
 
 header {
-
-
-  border: top 4px;
-  
-  float:right;
-  padding:5;
-  width:960px;
-  margin-left: 80%;
-  border-bottom: 1px dotted;color: #000;
+  border-top: 4px solid rgba(0,0,0,0.1);
+  margin-left: -2em;
+  margin-right: -2em;
  
 }
 
 body {
-  margin: 1em;
   color: #fff;
   background-color: rgb(36, 103, 167);
   text-align: center;
@@ -144,39 +151,45 @@ ol {
 table {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 3em;
-  padding-bottom: 3em;
-  padding-left: 1em;
-  padding-right: 1em;
   color: #fff;
-  background-color:rgb(0, 0, 0);opacity:0.5;
   border-collapse: collapse;
   text-align: left;
   
   
 }
 
-tr
+td,
+th {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+tbody tr td
 {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.05);
   
 }
 
-tr:nth-child(even) {background-color: #0d3e77;}
+tbody tr:nth-child(even) td {background-color: rgba(0,0,0,0.15); }
 
 
 
 
-thead{
+thead th,
+thead td {
  
   color: #fff;
-  background-color:rgb(0, 0, 0);opacity:0.2;
+  background-color:rgb(0, 0, 0, 0.2);
   text-align: center;
 }
 
-tfoot{
+tfoot th,
+tfoot td,
+tbody th {
 
-  background-color:rgb(0, 0, 0);opacity:0.2;
+  background-color:rgba(0, 0, 0, 0.2);
 
 
 }
@@ -208,14 +221,32 @@ border: none;
 background-color: rgb(28, 152, 201);
 }
 
+form label { 
+  display: block;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline;
+}
+
 textarea {
   width: 80%;
   height: 100px;
   padding: 12px 20px;
-  box-sizing: border-box;
   border: 2px solid rgb(59, 164, 206);
   border-radius: 4px;
   background-color: #bee7fa;
   resize: none;
 }
 
+input:invalid {
+  background-color: #fee;
+}
+
+[type="submit"] {
+  border: none;
+  padding: 1em 3em;
+  background-color: #350542;
+  color: white;
+}
