@@ -41,6 +41,8 @@ dt::after {
 nav ul li a {
   color: white
   text-decoration: none;
+  display: inline;
+
   }
 
 nav{
@@ -49,7 +51,7 @@ nav{
   border-style: solid;
   border-color: transparent;
   text-decoration: none;
-  
+  display: inline;
 
 }
 
