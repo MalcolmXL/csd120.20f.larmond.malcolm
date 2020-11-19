@@ -27,12 +27,16 @@
 
     <title>CSD120 Malcolm - Larmond</title>
     <style>
-      .footfix {
-        overflow: auto;
+      footer {
+        clear: both;
       }
 
       img {
         border-radius: 30px;
+      }
+
+      main img {
+        margin: 1em;
       }
     </style>
   </head>
@@ -49,17 +53,18 @@
         </nav>
       </header>
       <main>
-        <h1>
+        <h1>Lorem Ipsum</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
             odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
             quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
             mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
             <img
-              src=" https://loremflickr.com/g/320/240/paris,girl/all"
+              src="https://loremflickr.com/g/320/240/paris,girl/all"
               width="500"
               height="300"
-              margin="right:1px;"
+              style="float: left"
+              alt="In Paris"
             />Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu
             ad litora torquent per conubia nostra, per inceptos himenaeos.
             Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
@@ -87,9 +92,9 @@
           </p>
 
           <p>
-            Vestibulum ante ipsum primis in faucibus<img src="
-            https://loremflickr.com/320/240/paris,girl/all" height="300"
-            margin=left:5px;"> >ss orci luctus et ultrices posuere cubilia
+            Vestibulum ante ipsum primis in faucibus
+            <img src="https://loremflickr.com/320/240/paris,girl/all" height="300" alt="In Paris" style="float: right"> 
+            >ss orci luctus et ultrices posuere cubilia
             Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non
             quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit
             amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit
@@ -107,10 +112,8 @@
             accumsan porttitor, cursus quis, aliquet eget, justo. Sed pretium
             blandit orci.
           </p>
-        </h1>
       </main>
 
-      <div class="footfix">
         <footer>
           <hr />
           <blockquote
@@ -129,18 +132,11 @@
           </p>
 
           <picture>
-            <source
-              media="(min-width: 70px)"
-              srcset="Images/sc-logo@1.5x.png 150px"
-            />
-            <source
-              media="(min-width: 70px)"
-              srcset="Images/sc-logo@2.5x.png 175px"
-            />
-            <img src="Images/sc-logo.png" alt=" SC Logo" />
+            <source type="image/svg+xml" srcset="images/sc-logo.svg">
+            <img src="images/sc-logo.png" width="70" alt="Sault College Logo"
+                srcset="images/sc-logo.png, images/sc-logo@1.5x.png 1.5x, images/sc-logo@2.png 2x">
           </picture>
         </footer>
-      </div>
 
       <!--Found Me-->
 
