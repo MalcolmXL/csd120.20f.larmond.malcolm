@@ -38,26 +38,13 @@
       <main>
         <h1>Welcome to Malcolm’s CSD120 Website!</h1>
         
-      
-       <div class= "shadow">
-        <picture>
-          
-          <a href="Images/MalPic.jpg"     alt ="Thumbnail">
-          <source media="(min-width: 300px)" srcset="Images/MalPicThumb300wide.jpg x2" alt="Thumbnail" />
-          <source media="(min-width: 150px)" srcset="Images/MalPicThumb150wide.jpg x1" alt = "Thumbnail"/>
-          <img src="Images/MalPicThumb300wide.jpg" alt=" Thumbnail" class= padding/>
-        
-         
-        </picture>
-      
-      </div>
-
-
-
-        </a>
-      
         <div class="bio">
         
+          <a href="Images/MalPic.jpg">
+            <img src="Images/MalPicThumb300wide.jpg" sizes="(max-width:500px) 150px, 300px"
+                srcset="Images/MalPicThumb150wide.jpg 150w,
+                        Images/MalPicThumb300wide.jpg 300w" alt="A mugshot of Malcolm">
+                    </a>
       
 
 
@@ -77,10 +64,9 @@
           That being said, a lot of work is becoming remote in the computer
           realm so I could also remain here in Sault Ste Marie.
         </p>
-      </div>
 
-      <div class = "tab2">
         <table>
+          <caption>Table 1. Current Courses</caption>
          
           <thead>
             <tr>
@@ -166,10 +152,9 @@
               <td>40</td>
             </tr>
           </tfoot>
-          <caption>Table 1. Current Courses</caption>
           
       </table>
-      
+
     </div>
 
 
@@ -178,7 +163,7 @@
         <h2>My Favourite Things</h2>
 
         <figure>
-          <img src="Images/reason set up2.jpg" alt="Studio Setup" width="500" height="300">
+          <img src="Images/reason+set+up2.jpg" alt="Studio Setup" width="500" height="300">
           <figcaption>Fig.1 - Modern Studio Setup.</figcaption>
         </figure>
 
@@ -225,7 +210,6 @@
       </main>
 
       
-      <div class=footer>
       <footer>
         <hr />
         <blockquote
@@ -245,18 +229,17 @@
         </p>
 
         <picture>
-          <source media="(min-width: 70px)" srcset="Images/sc-logo@1.5x.png 150px" />
-          <source media="(min-width: 70px)" srcset="Images/sc-logo@2.5x.png 175px"/>
-          <img src="Images/sc-logo.png" alt=" SC Logo" />
+          <source type="image/svg+xml" srcset="images/sc-logo.svg">
+          <img src="images/sc-logo.png" width="70" alt="Sault College Logo"
+              srcset="images/sc-logo.png, images/sc-logo@1.5x.png 1.5x, images/sc-logo@2.png 2x">
         </picture>
       </footer>
-      </div>
 
 
 
       <!--Found Me-->
 
-      <a href="#top" title="Back to top">◤ Top</a>
+      <a href="#top" title="Back to top">◤</a>
     </div>
   </body>
 </html>
