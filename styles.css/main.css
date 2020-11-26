@@ -18,7 +18,22 @@ dt::after {
 
 ::selection {
   background-color: rgba(0,0,0,0.5);
+
 }
+hr {
+
+  min-width: 300px;
+  max-width: 600px;
+  
+  margin-bottom: 2px;
+  border-style: none;
+  border-bottom-style: dotted;
+  border-bottom-color: whitesmoke;
+  border-bottom-width: 3px;
+  
+  
+  }
+
 
 .width-wrap {
   background-color: #18b0ec;
@@ -114,12 +129,24 @@ column-span: all;
 }
 .bio img {
   
-  box-shadow: inset 3px 3px 10px 0 #46cbf3;
-  background-color: #fff;
-  padding: 2%;
-  border-radius: 9px;
+ 
   
+  padding: 2%;
+  border-radius: 25px;
+  display: block;
+  position:relative;
 }
+
+.paperclip{
+  
+  background-image:none;
+  
+  width: 50%;
+  position: relative;
+  left: -99px;
+  margin: auto;
+}
+
 
 .favorite {
 
@@ -163,19 +190,7 @@ a[href="#top"]:hover {
 }
 
 
-hr {
 
-min-width: 300px;
-max-width: 600px;
-
-margin-bottom: 2px;
-border-style: none;
-border-bottom-style: dotted;
-border-bottom-color: whitesmoke;
-border-bottom-width: 3px;
-
-
-}
 
 a:link {
 
