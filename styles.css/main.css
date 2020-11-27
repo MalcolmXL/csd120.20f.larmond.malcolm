@@ -1,15 +1,10 @@
-
-        
-     /* Applies to the entire body of the HTML document (except where overridden by more specific
-selectors). */
-     /* main.css */   
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 dt::after {
@@ -17,23 +12,18 @@ dt::after {
 }
 
 ::selection {
-  background-color: rgba(0,0,0,0.5);
-
+  background-color: rgba(0, 0, 0, 0.5);
 }
 hr {
-
   min-width: 300px;
   max-width: 600px;
-  
+
   margin-bottom: 2px;
   border-style: none;
   border-bottom-style: dotted;
   border-bottom-color: whitesmoke;
   border-bottom-width: 3px;
-  
-  
-  }
-
+}
 
 .width-wrap {
   background-color: #18b0ec;
@@ -44,10 +34,9 @@ hr {
   border: 1px black;
   margin: 0px auto 3em;
   min-width: 480px;
- 
+
   border-top: 0em;
   border-bottom: 2em solid;
-  
 }
 
 img {
@@ -57,106 +46,81 @@ img {
 }
 
 header nav {
-  border-bottom: 1px dotted rgba(0,0,0,0.3);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
   margin-left: 2em;
   margin-right: 2em;
- 
 }
 
 nav ul li a {
   color: rgb(113, 147, 238);
   text-decoration: none;
- 
 
   margin-left: 1em;
-  margin-right:1em;
+  margin-right: 1em;
   margin-top: -4px;
 
   color: white;
   text-align: center;
   padding: 1em 0 0.5em;
-      
+
   border-top: 4px solid transparent;
-
-    
-  }
-
-nav ul li a:hover {
-    background-color: #75b4d1;
-    border-color: #fff;
-    text-decoration: none;
 }
 
-nav ul{
-  margin:0;
-  padding:0;
+nav ul li a:hover {
+  background-color: #75b4d1;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  
- 
-  }
- 
-  nav ul li {
-   
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    padding: 0;
-
-  }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family:Rubik, sans-serif;
 }
 
+nav ul li {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 0;
+}
 
-
-.bio{
+.bio {
   columns: 3;
   column-gap: 2em;
-
 }
 
 .bio table {
-
-margin-top: 1em; 
-caption-side: bottom;
-column-span: all;
-
+  margin-top: 1em;
+  caption-side: bottom;
+  column-span: all;
 }
 .bio img {
-  
- 
-  
   padding: 2%;
   border-radius: 25px;
   display: block;
-  position:relative;
+  position: relative;
 }
 
-.paperclip{
-  
-  background-image:none;
-  
+.paperclip {
+  background-image: none;
+
   width: 50%;
   position: relative;
   left: -99px;
   margin: auto;
 }
 
-
 .favorite {
-
-display: inline-flexbox;
-color: rgb(203, 227, 255);
-width: 100%;
-flex-wrap: wrap;
-flex-direction: row;
-
-
+  display: inline-flexbox;
+  color: rgb(203, 227, 255);
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .gallery {
@@ -165,21 +129,20 @@ flex-direction: row;
   grid-template-columns: 200px 200px 200px 200px;
   justify-content: space-evenly;
   padding: 10px 10px 10px 10px;
-
-
 }
 
-
-
-
-
-
+.top2 {
+  position: sticky;
+  display: inline-block;
+  left: -25px;
+  padding-bottom: 10px;
+  transform: rotate(45deg);
+  transition: transform 2s;
+}
 
 footer {
-
-text-align: center;
-font-size: 75%;
-
+  text-align: center;
+  font-size: 75%;
 }
 
 a[href="#top"] {
@@ -189,14 +152,9 @@ a[href="#top"]:hover {
   text-decoration: none;
 }
 
-
-
-
 a:link {
-
   text-decoration: none;
 }
-
 
 a:visited {
   text-decoration: none;
@@ -211,32 +169,44 @@ a:active {
 }
 
 header {
-  border-top: 4px solid rgba(0,0,0,0.1);
+  border-top: 4px solid rgba(0, 0, 0, 0.1);
   margin-left: -2em;
   margin-right: -2em;
- 
 }
 
 body {
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
   margin: 1em;
   color: #fff;
   background-color: rgb(36, 103, 167);
   text-align: center;
   font-family: Karla, sans-serif;
   line-height: 1.3;
-
 }
 
 /* Applies to all <h1>...</h1> elements. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Rubik, sans-serif;
+}
+
 h1 {
   font-size: 25px;
   font-weight: normal;
   margin-top: 5px;
-  color:rgba(0,0,0,0);
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(22,148,209,1) 23%, rgba(0,212,255,1) 100%);
+  color: rgba(0, 0, 0, 0);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(22, 148, 209, 1) 23%,
+    rgba(0, 212, 255, 1) 100%
+  );
   background-clip: text;
 }
 
@@ -255,28 +225,21 @@ h3 {
 }
 li {
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
   list-style: none;
   text-align: center;
   align-items: center;
   padding: 10px;
-
 }
-ol li{
+ol li {
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
   list-style-type: upper-roman;
   color: #dfe6ee;
   list-style-position: inside;
   text-align: center;
   padding: 6px;
-
-
 }
-
-
-
-
 
 table {
   margin-left: auto;
@@ -284,8 +247,6 @@ table {
   color: #fff;
   border-collapse: collapse;
   text-align: left;
-  
-  
 }
 
 td,
@@ -296,66 +257,58 @@ th {
   padding-right: 1em;
 }
 
-tbody tr td
-{
+tbody tr td {
   background-color: rgba(0, 0, 0, 0.05);
-  
 }
 
-tbody tr:nth-child(even) td {background-color: rgba(0,0,0,0.15); }
-
-
-
+tbody tr:nth-child(even) td {
+  background-color: rgba(0, 0, 0, 0.15);
+}
 
 thead th,
 thead td {
- 
   color: #fff;
-  background-color:rgb(0, 0, 0, 0.2);
+  background-color: rgb(0, 0, 0, 0.2);
   text-align: center;
 }
 
 tfoot th,
 tfoot td,
 tbody th {
-
-  background-color:rgba(0, 0, 0, 0.2);
-
-
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-dl{
+dl {
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
   align-items: center;
   padding: 0em;
 }
 
-dl dd{
+dl dd {
   margin-left: auto;
-  margin-right:auto;
-color: #d6d6e2;
-align-items: center;
-padding: 0em;
-  
+  margin-right: auto;
+  color: #d6d6e2;
+  align-items: center;
+  padding: 0em;
 }
-input:focus{
-  outline:none;
+input:focus {
+  outline: none;
 }
-form{
-margin: 1em;
-box-shadow: none;
-border: none;
-background-color: rgb(28, 152, 201);
+form {
+  margin: 1em;
+  box-shadow: none;
+  border: none;
+  background-color: rgb(28, 152, 201);
 }
 
-form label { 
+form label {
   display: block;
 }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-    display: inline;
+  display: inline;
 }
 
 textarea {
@@ -369,11 +322,10 @@ textarea {
 }
 iframe,
 object,
-embed{
-  border-top-left-radius: 2em;   
-  border-bottom-right-radius:2em ; 
+embed {
+  border-top-left-radius: 2em;
+  border-bottom-right-radius: 2em;
 }
-
 
 input:invalid {
   background-color: #fee;
