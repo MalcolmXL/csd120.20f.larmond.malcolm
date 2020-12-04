@@ -54,15 +54,12 @@
               "
               alt="A mugshot of Malcolm"
             />
-          </a>
-          <div class="paperclip">
             <img
               class="paperclip"
               src="Images/paperclip.png"
               alt="An image paperclip"
             />
-          </div>
-
+          </a>
           <p>
             I am currently studying Computer programming at Sault College in
             Northern Ontario. Becuase of the global panademic the course is
@@ -172,66 +169,57 @@
         <br /><br />
 
         <h2>My Favourite Things</h2>
-        <div class="favorite">
-          <fieldset>
-            <input
-              type="radio"
-              id="fav1"
-              name="favthing"
-              value="Sound Design"
-            />
-            <label for="fav1">Sound Design</label>
+        <div class="favourites">
+            
+            <input type="radio" id="fav1" name="favthing" value="Sound Design" checked />
+            <label for="fav1"><h3>Sound Design</h3></label>
+            <div>
+            <figure>
+              <img
+                src="Images/reasonsetup.jpg"
+                alt="Studio Setup"
+                width="500"
+                height="240"
+              />
+              <figcaption>Fig.1 - Modern Studio Setup.</figcaption>
+            </figure>
+            </div>
+            <input type="radio" id="fav2" name="favthing" value="Haiku" />
+            <label for="fav2"><h3>Haiku</h3></label>
+            <div>
+              <h4>Pot Holes</h4>
+              <p>
+                Meandering thoughts
+                <br />
+                suddenly see pot holes turn
+                <br />
+                into the lake<br />
+                <cite>by <span class="author">Malcolm L.</span></cite>
+              </p>
+            </div>
 
-            <input type="radio" id="fav2" name="favthing" value="Mixing" />
-            <label for="fav2">Mixing</label>
-
-            <input type="radio" id="fav3" name="favthing" value="Gardening" />
-            <label for="fav3">Gardening</label>
-          </fieldset>
-        </div>
-        <h3>Haiku - Pot Holes</h3>
-        <p>
-          Meandering thoughts
-          <br />
-          suddenly see pot holes turn
-          <br />
-          into the lake<br />
-          <cite>by <span class="author">Malcolm L.</span></cite>
-        </p>
-
-        <figure>
-          <img
-            src="Images/reasonsetup.jpg"
-            alt="Studio Setup"
-            width="500"
-            height="240"
-          />
-          <figcaption>Fig.1 - Modern Studio Setup.</figcaption>
-        </figure>
-        <h3>Public Domain Audiobook</h3>
-        <audio controls>
-          <source
-            src="https://ia801505.us.archive.org/19/items/dream_collection_2_2009_librivox/dreamscollection02_04_various_128kb.mp3"
-            type="audio/mp3"
-          />
-        </audio>
-
-        <p>
-          <a
-            href="https://ia801505.us.archive.org/19/items/dream_collection_2_2009_librivox/dreamscollection02_04_various_128kb.mp3"
-            >Click here to download the audio
-          </a>
-        </p>
-        <br /><br />
-        <h3>Youtube Video</h3>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/srqBRo1x7Ko"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+            <input type="radio" id="fav3" name="favthing" />
+            <label for="fav3"><h3>Audiobook</h3></label>
+            <div>
+              <audio controls>
+                <source
+                  src="https://ia801505.us.archive.org/19/items/dream_collection_2_2009_librivox/dreamscollection02_04_various_128kb.mp3"
+                  type="audio/mp3"
+                />
+              </audio>
+            </div>
+            <input type="radio" id="fav5" name="favthing" />
+            <label for="fav5"><h3>Youtube Video</h3></label>
+            <div>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/srqBRo1x7Ko"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
       </main>
 
       <footer>
