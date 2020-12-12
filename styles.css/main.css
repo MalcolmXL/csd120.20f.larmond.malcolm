@@ -49,6 +49,7 @@ header nav {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
   margin-left: 2em;
   margin-right: 2em;
+  
 }
 
 nav ul li a {
@@ -80,6 +81,8 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 nav ul li {
@@ -90,8 +93,8 @@ nav ul li {
 }
 
 .bio {
-  columns: 3;
-  column-gap: 2em;
+  
+  column-width: 13em;
 }
 
 .bio table {
@@ -102,7 +105,7 @@ nav ul li {
 .bio img {
   padding: 2%;
   border-radius: 25px;
-  display: block;
+  display: inline-block;
   position: relative;
 }
 
@@ -111,7 +114,7 @@ nav ul li {
 
   width: 50%;
   position: relative;
-  left: -99px;
+  left: -75px;
   margin: auto;
 }
 
@@ -120,7 +123,15 @@ nav ul li {
   color: rgb(203, 227, 255);
   width: 100%;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: row;}
+
+  @media only screen and (max-width: 800px) {
+    /* For phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+
+
 }
 
 .gallery {
@@ -129,6 +140,7 @@ nav ul li {
   grid-template-columns: 200px 200px 200px 200px;
   justify-content: space-evenly;
   padding: 10px 10px 10px 10px;
+  min-width: 180px;
 }
 
 .top2 {
@@ -154,6 +166,7 @@ a[href="#top"]:hover {
 
 a:link {
   text-decoration: none;
+  padding-top: 0.5em;
 }
 
 a:visited {
@@ -166,6 +179,7 @@ a:hover {
 
 a:active {
   text-decoration: none;
+  padding-top: 0.5em;
 }
 
 header {
@@ -193,6 +207,10 @@ h4,
 h5,
 h6 {
   font-family: Rubik, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 5px;
+  color: whitesmoke;
 }
 
 h1 {
@@ -210,19 +228,6 @@ h1 {
   background-clip: text;
 }
 
-h2 {
-  font-size: 20px;
-  font-weight: normal;
-  margin-top: 5px;
-  color: whitesmoke;
-}
-
-h3 {
-  font-size: 20px;
-  font-weight: normal;
-  margin-top: 5px;
-  color: whitesmoke;
-}
 li {
   margin-left: auto;
   margin-right: auto;
@@ -247,26 +252,39 @@ table {
   color: #fff;
   border-collapse: collapse;
   text-align: left;
+  display: block;
+  font-size: .08em;
+  font: italic;
+  font: bold;
+
+
+
 }
 
-td,
+
+
 th {
   padding-top: 0.3em;
   padding-bottom: 0.3em;
   padding-left: 1em;
   padding-right: 1em;
+  display: block;
+  font: italic;
 }
 
 tbody tr td {
   background-color: rgba(0, 0, 0, 0.05);
+  display: block;
 }
 
 tbody tr:nth-child(even) td {
   background-color: rgba(0, 0, 0, 0.15);
+  display: block;
 }
 
 thead th,
 thead td {
+  display: block;
   color: #fff;
   background-color: rgb(0, 0, 0, 0.2);
   text-align: center;
@@ -275,6 +293,7 @@ thead td {
 tfoot th,
 tfoot td,
 tbody th {
+  display: block;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
