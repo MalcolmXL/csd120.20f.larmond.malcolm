@@ -79,10 +79,7 @@ nav ul {
   list-style-type: none;
   text-decoration: none;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 nav ul li {
@@ -90,6 +87,19 @@ nav ul li {
   text-transform: uppercase;
   letter-spacing: 4px;
   padding: 0;
+}
+
+@media screen and ( max-width: 500px ) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;  
+    height: 0;
+    overflow: hidden;
+    transition: all 200ms;
+  }
+  #menu-toggle:checked + .sandwich-icon + ul {
+    height: 150px;
+  }
 }
 
 .bio {
@@ -106,6 +116,9 @@ nav ul li {
   padding: 2%;
   border-radius: 25px;
   display: inline-block;
+}
+.bio a {
+  display: inline-block;
   position: relative;
 }
 
@@ -119,6 +132,7 @@ nav ul li {
 }
 
 .favorite {
+  /* See the sample solution for one approach */
   display: inline-flexbox;
   color: rgb(203, 227, 255);
   width: 100%;
@@ -137,10 +151,29 @@ nav ul li {
 .gallery {
   display: block;
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   justify-content: space-evenly;
   padding: 10px 10px 10px 10px;
   min-width: 180px;
+}
+
+.gallery a {
+  transition: transform 200ms;
+}
+.gallery a:hover {
+  transform: scale(1.1);
+}
+
+.gallery .row-span-2 {
+  grid-row: span 2;
+}
+.gallery .col-span-2 {
+  grid-column: span 2;
+}
+@media screen and ( max-width: 400px ) {
+  .gallery .col-span-2 {
+    grid-column: span 1;
+  } 
 }
 
 .top2 {
@@ -148,8 +181,6 @@ nav ul li {
   display: inline-block;
   left: -25px;
   padding-bottom: 10px;
-  transform: rotate(45deg);
-  transition: transform 2s;
 }
 
 footer {
@@ -159,9 +190,11 @@ footer {
 
 a[href="#top"] {
   text-shadow: 1px 1px 2px #e9660f;
+  transition: transform 200ms;
 }
 a[href="#top"]:hover {
   text-decoration: none;
+  transform: rotate(45deg);
 }
 
 a:link {
@@ -252,13 +285,6 @@ table {
   color: #fff;
   border-collapse: collapse;
   text-align: left;
-  display: block;
-  font-size: .08em;
-  font: italic;
-  font: bold;
-
-
-
 }
 
 
@@ -268,33 +294,52 @@ th {
   padding-bottom: 0.3em;
   padding-left: 1em;
   padding-right: 1em;
-  display: block;
-  font: italic;
 }
 
 tbody tr td {
   background-color: rgba(0, 0, 0, 0.05);
-  display: block;
 }
 
 tbody tr:nth-child(even) td {
   background-color: rgba(0, 0, 0, 0.15);
-  display: block;
 }
 
 thead th,
 thead td {
-  display: block;
   color: #fff;
   background-color: rgb(0, 0, 0, 0.2);
   text-align: center;
 }
 
+
 tfoot th,
 tfoot td,
 tbody th {
-  display: block;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 550px) {
+  .bio table caption {
+      caption-side: top;
+  }
+  .bio table td { 
+      display: block; 
+      padding: 0 1rem;
+  }
+  .bio table td:first-of-type { 
+      padding-top: 0.3em;
+      font-weight: bold;
+  }
+  .bio table td:last-child { 
+      padding-bottom: 0.3em;
+      font-style: italic;
+      font-size: 0.8em;
+  }
+  .bio table td:last-child::after {
+      content: " hrs/wk"
+  }
+  .bio thead, .bio tfoot, .bio th { display: none; }
+
 }
 
 dl {
@@ -355,4 +400,49 @@ input:invalid {
   padding: 1em 3em;
   background-color: #350542;
   color: white;
+}
+
+
+
+#menu-toggle,
+.sandwich-icon {
+    display: none;
+}
+
+@media screen and ( max-width: 500px ) {
+ 
+    #menu-toggle + .sandwich-icon,
+    .sandwich-icon::before,
+    .sandwich-icon::after {
+        display: block;
+        width: 40px;
+        border-top: solid 5px #742974;
+
+        transition: all 200ms ease-in-out;
+    }
+    .sandwich-icon {
+       position: relative;
+        height: 25px;
+        margin: 1em auto;
+        cursor: pointer;
+    }
+    .sandwich-icon::before,
+    .sandwich-icon::after {
+        content: "";
+        position: absolute;
+    }
+    .sandwich-icon::before {
+        top: 5px;
+    }
+    .sandwich-icon::after {
+        top: 15px;
+    }
+
+    #menu-toggle:checked + .sandwich-icon {
+        transform: rotate(45deg);
+        border-top-color: transparent;
+    }
+    #menu-toggle:checked + .sandwich-icon::after {
+        transform: rotate(-90deg) translateX(10px);
+    }
 }
